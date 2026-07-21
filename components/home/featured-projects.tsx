@@ -30,11 +30,14 @@ export function FeaturedProjects() {
               className="flex flex-col animate-fade-in"
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              {/* Project image placeholder */}
+              {/* Project image */}
               <div className="aspect-video rounded-lg bg-muted mb-4 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center text-muted-foreground text-sm">
-                  {project.title}
-                </div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
 
               <CardHeader className="p-0">

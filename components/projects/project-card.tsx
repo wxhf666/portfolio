@@ -15,9 +15,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <Card className="h-full flex flex-col">
         {/* Thumbnail */}
         <div className="aspect-video rounded-lg bg-muted mb-4 overflow-hidden">
-          <div className="w-full h-full flex items-center justify-center text-muted-foreground text-sm group-hover:text-primary transition-colors">
-            {project.title}
-          </div>
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            loading="lazy"
+          />
         </div>
 
         <CardHeader className="p-0">

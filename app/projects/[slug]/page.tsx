@@ -121,9 +121,13 @@ export default async function ProjectDetail({ params }: ProjectDetailProps) {
           </div>
         </div>
 
-        {/* Image placeholder */}
-        <div className="aspect-video rounded-xl bg-muted mb-10 flex items-center justify-center text-muted-foreground">
-          {project.title} — 项目截图
+        {/* Image */}
+        <div className="aspect-video rounded-xl bg-muted mb-10 overflow-hidden">
+          <img
+            src={project.image}
+            alt={`${project.title} 项目截图`}
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Description */}
