@@ -40,10 +40,14 @@ export default function AboutPage() {
         {/* Bio section */}
         <section className="mb-20">
           <div className="grid sm:grid-cols-3 gap-8 items-start">
-            {/* Avatar placeholder */}
+            {/* Avatar */}
             <div className="flex justify-center sm:justify-start">
-              <div className="w-40 h-40 rounded-2xl bg-muted flex items-center justify-center text-muted-foreground text-sm">
-                头像
+              <div className="w-40 h-40 rounded-2xl overflow-hidden bg-muted">
+                <img
+                  src="/avatar.png"
+                  alt={`${siteConfig.name} 的头像`}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="sm:col-span-2 space-y-4">
